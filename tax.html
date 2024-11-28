@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action=""  onsubmit="taxdeduction()">
+        <input type="text" name="salary" id="salary" placeholder="Enter salary">
+        <br><br>
+
+        <input type="submit">
+     </form>
+     <br><br>
+     <table border="1">
+        <tr>
+            <th>Income Tax Slab</th>
+            <th>Income Tax Rate</th>
+            <th>Actual Tax</th>
+        </tr>
+        <tr>
+            <td>Upto 3 Lakh</td>
+            <td>nill</td>
+            <td id="slab1"></td>
+        </tr>
+        <tr>
+            <td>3 Lakh to 6 Lakh</td>
+            <td>5%</td>
+            <td id="slab2"></td>
+        </tr>
+        <tr>
+            <td>6 Lakh to 9 Lakh</td>
+            <td>10%</td>
+            <td id="slab3"></td>
+        </tr>
+        <tr>
+            <td>9 Lakh to 12 Lakh</td>
+            <td>15%</td>
+            <td id="slab4"></td>
+        </tr>
+        <tr>
+            <td>12 Lakh to 15 Lakh</td>
+            <td>20%</td>
+            <td id="slab5"></td>
+        </tr>
+        <tr>
+            <td>Above 15 Lakh</td>
+            <td>30%</td>
+            <td id="slab6"></td>
+        </tr>
+     </table>
+
+     <div id="show"></div>
+    
+
+    <script src="JS/tax.js"></script>
+</body>
+</html>

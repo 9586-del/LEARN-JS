@@ -1,6 +1,28 @@
-function insert() {
+function insert(n) {
 
-    event.preventDefault();
+document.getElementById("textview").value=document.getElementById("textview").value+n
+
 
 
 }
+
+function backspace() {
+    let exp=document.getElementById("textview").value;
+
+    document.getElementById("textview").value=exp.substring(0, exp.length -1);
+
+    
+}
+
+function equal() {
+
+    let exp=document.getElementById("textview").value;
+
+
+    document.getElementById("textview").value=eval(exp);
+    
+}
+
+// math method in JS
+// date method in js
+// number method in js

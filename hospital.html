@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #apt_form {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+        <select name="tre" id="tre" onchange="handletreatment()">
+            <option value="0">--select treatment--</option>
+            <option value="Teeth cleaning">Teeth cleaning</option>
+            <option value="Fillings">Fillings</option>
+            <option value="Root canal treatment">Root canal treatment</option>
+            <option value="RCT+Cover">RCT+Cover</option>
+            <option value="Braces">Braces</option>
+        </select>
+        <br><br>
+
+<div id="disp"></div>
+<br><br>
+
+<form action="" id="apt_form" onsubmit="Appointment()" >
+    <input type="date" name="date" id="aptdate">
+    <br><br>
+    <input type="submit">
+</form>
+<br><br>
+
+<div id="apttable">
+
+</div>
+
+
+
+    
+
+
+    <script src="JS/hospital.js"></script>
+</body>
+</html>

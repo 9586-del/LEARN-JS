@@ -13,11 +13,24 @@ document.getElementById("num2").innerHTML=num2;
 function handlesubmit() {
 let ans=parseInt(document.getElementById("ans").value);
 
-if (ans==(num1+num2)) {
-   alert("correct capthcha");
+let validForm=true;
+
+if (ans){
+    document.getElementById("ansErr").innerHTML="";
 } else {
-    alert("Incorrect capthcha");
-   
+    document.getElementById("ansErr").innerHTML="please enter valid captcha.";
+    validForm=false;
 }
+
+if(validForm){
+    if (ans==(num1+num2)) {
+        alert("correct capthcha");
+     } else {
+         alert("Incorrect capthcha");
+        
+     }
+}
+
+return validForm;
 }
 

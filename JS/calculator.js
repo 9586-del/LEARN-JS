@@ -19,10 +19,24 @@ function equal() {
     let exp=document.getElementById("textview").value;
 
 
-    document.getElementById("textview").value=eval(exp);
+
+    let reg = /^[0-9*/+-]/;
+
+    
+
+    if (exp) {
+        if (reg.test(exp)) {
+            document.getElementById("textview").value = eval(exp);
+    
+            document.getElementById("ansErr").innerHTML = "";
+    
+        } else {
+            document.getElementById("ansErr").innerHTML = "please enter valid data";
+        }
+    } else {
+        document.getElementById("ansErr").innerHTML = "please enter data";
+
     
 }
 
-// math method in JS
-// date method in js
-// number method in js
+}

@@ -5,6 +5,9 @@ function validateForm() {
     let mobile=document.contactForm.mobile.value;
     let country=document.contactForm.country.value;
     let gender=document.contactForm.gender;
+    let hobbies=document.contactForm.hobbies;
+
+    let formValidate=true;
 
   
 
@@ -13,6 +16,7 @@ function validateForm() {
 
     if(name===''){
         document.getElementById("nameErr").innerHTML="please enter name."
+        formValidate=false;
     } else {
         let regexname = /^[a-zA-Z ]{2,30}$/;
 
@@ -20,6 +24,8 @@ function validateForm() {
             document.getElementById("nameErr").innerHTML=""
         } else {
             document.getElementById("nameErr").innerHTML="please enter your name properly."
+        formValidate=false;
+
             
         }
         
@@ -29,6 +35,8 @@ function validateForm() {
     if(email===''){
         
         document.getElementById("emailErr").innerHTML="please enter name."
+        formValidate=false;
+
     } else {
 
         let regexemail= /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -38,6 +46,7 @@ function validateForm() {
 
         } else {
             document.getElementById("emailErr").innerHTML="please enter email properly."
+            formValidate=false;
 
         }
 
@@ -45,6 +54,8 @@ function validateForm() {
 
     if(mobile===''){
         document.getElementById("mobileErr").innerHTML="please enter name."
+        formValidate=false;
+
     } else {
 
         if (!isNaN(mobile)&&mobile.length==10) {
@@ -52,12 +63,15 @@ function validateForm() {
 
         } else{
             document.getElementById("mobileErr").innerHTML="please enter your mobile number properly."
+            formValidate=false;
 
         }
     }
 
     if(country === "0"){
         document.getElementById("countryErr").innerHTML="please select country."
+        formValidate=false;
+
     } else {
         document.getElementById("countryErr").innerHTML=""
     }
@@ -77,11 +91,29 @@ function validateForm() {
         document.getElementById("genderErr").innerHTML="";
     } else {
         document.getElementById("genderErr").innerHTML="please select your gender.";
+        formValidate=false;
 
     }
 
+   let countHobbies=0;
 
+   for(let i=0; i<hobbies.length;i++) {
+    if(hobbies[i].checked){
+        countHobbies++;
+    }
+    }
+   if(countHobbies<2){
+    document.getElementById("hobbyErr").innerHTML="please select atleast two hobbies.";
+    formValidate=false;
 
+} else {
+    document.getElementById("hobbyErr").innerHTML="";
 
-    return false;
 }
+
+
+    return formValidate;
+
+}
+
+

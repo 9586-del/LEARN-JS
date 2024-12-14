@@ -28,7 +28,7 @@
 
 // arr1.map((v,i) => console.log(i,v));
 
-// let arr1=[10,8,92,17,33];
+let arr1=[10,8,92,17,33];
 
 //add                        //return number of element
 // // ans=arr1.push(99);          // add at last
@@ -40,7 +40,7 @@
 //remove
 // ans=arr1.pop();          //remove at last     //return removed element
 // ans=arr1.shift();            //remove at first     //return removed element
-// ans=arr1.splice(3,2);            //remove at specific position     //return removed element
+ans=arr1.splice(3,2);            //remove at specific position     //return removed element
 
 
 // update
@@ -68,7 +68,7 @@
 // let ans = arr1.toString()                   //convert array to string            //return string
 // console.log(ans);
 
-let arr1=[10,8,92,88.3,92,33];
+// let arr1=[10,8,92,88.3,92,33];
 // let arr2=['bipin','meet','jainik']
 
 // let ans= arr1.slice(2,5);                            //part of the array                                 //return array
@@ -77,7 +77,7 @@ let arr1=[10,8,92,88.3,92,33];
 
 // let ans=arr1.reduce((acc,v,i) => acc*v, 1);          //return value
 
-let ans = arr1.indexOf(92);                          //first occurence of element's index                //return index
+// let ans = arr1.indexOf(92);                          //first occurence of element's index                //return index
 
 // let ans = arr1.lastIndexOf(92);                      //last occurence of element's index                 //return index
 

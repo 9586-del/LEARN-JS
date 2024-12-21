@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" name="click" id="click" placeholder="click me" onclick="handleClick()">
+    
+    <h1 id="mouse" onmouseover="handleMouse()">hello</h1>
+
+    <h1 id="mouse" onmouseout="handleMouse1()">hello</h1>
+
+    <h1 id="mouse" onmousedown="handleMouse2()">hello</h1>
+
+    <h1 id="mouse" onmouseup="handleMouse3()">hello</h1>
+
+    <h1 id="mouse" onmousemove="handleMouse4()">hello</h1>
+
+    
+
+    <input type="search" name="search" id="search" placeholder="search..." onkeydown="handledown5()" >
+
+    <input type="search" name="search" id="search1" placeholder="search..." onkeyup="handledown6()" >
+
+<br><br>
+
+<form action="">
+    <input type="search" name="search" id="search2" placeholder="search..." onfocus="handledown7()" onblur="handledown8()">
+
+</form>
+
+<br><br>
+<select name="" id="search3" onchange="handledown9()">
+    <option value="0">--select country--</option>
+    <option value="in">India</option>
+    <option value="usa">USA</option>
+    <option value="uk">UK</option>
+</select>
+
+
+
+
+
+    <script src="JS/event.js"></script>
+</body>
+</html>

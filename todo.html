@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="handleTodo()">
+        <input type="text" name="todo" id="todo" placeholder="Enter todo">
+        <span id="todoErr"></span>
+        <br><br>
+        <input type="submit">
+    </form>
+<br>
+    <input type="search" name="search" id="search" placeholder="search.." onkeyup="handleSearch()">
+    <select name="sort" id="sort" onclick="handleSort()">
+        <option value="0">--select option--</option>
+        <option value="az">A-Z</option>
+        <option value="za">Z-A</option>
+      
+    </select>
+    <div id="disp">
+
+    
+        
+    </div>
+    <br><br>
+   
+ 
+    <script src="JS/todo.js"></script>
+</body>
+</html>

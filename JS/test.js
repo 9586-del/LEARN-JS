@@ -27,7 +27,7 @@
 // //5. Search 99 is available or not
 // let arr1 = [10,8,61,31,5];
 // let ans = arr1.includes(99); 
-// console.log(ans);
+// console.log(ans);5
 
 
 
@@ -63,7 +63,7 @@
 // 5. Sort arr3 in descending order.
 // let arr3 = [6,9,80];
 // let ans= arr3.sort((a,b) => b-a);  
-// console.log(ans);
+// console.log(ans);10
 
 
 // Q-3 [Each 3 Marks]

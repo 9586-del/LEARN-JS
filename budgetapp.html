@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="budgetapp.css">
+    <link rel="stylesheet" href="budgetapp.html">
+    <title>Document</title>
+</head>
+<body>
+    <form id="bug">
+        <input type="text" class="exp" name="budget" id="budget" placeholder="Enter your budget">
+        <span id="bugerr"></span>
+        <input type="submit" class="sub">
+    </form>
+    
+    <form id="bugone">
+        <input type="text" class="exp" name="exp" id="exp_name" placeholder="Please enter your expense">
+        <span id="experr"></span>
+        <input type="text" class="exp" name="exp" id="exps_amt" placeholder="Please enter amount">
+        <span id="bugserr"></span>
+
+        <input type="submit" class="sub">
+    </form>
+
+    <form class="bug-app">
+        <div class="bugs">BUDGET<i class="fa-solid fa-indian-rupee-sign"></i><span id="budget_amt"></span></div>
+        <div class="bugs">EXPENSES<i class="fa-solid fa-indian-rupee-sign"></i><span id="expense_amt"></span></div>
+        <div class="bugs">BALANCE<i class="fa-solid fa-indian-rupee-sign"></i><span id="balance_amt"></span></div>
+    </form>
+    <br><br>
+  <div id="EditDel">
+    <span></span>
+    <span></span>
+    <button>E</button>
+    <button>D</button>
+  </div>
+
+   <script src="JS/budgetapp.js"></script>
+</body>
+</html>

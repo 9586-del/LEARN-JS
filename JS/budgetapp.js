@@ -61,20 +61,28 @@ class Expense extends Budget {
         this.amt = document.getElementById("exps_amt");
 
     }
+    removedata (id) {
+        const del = document.getElementById("exp-" + id)
+        del.remove(id);
+        const localExp = JSON.parse(localStorage.getItem("expense"));
+        const fdata = localExp.filter((v) => v.id !== id);
+        localStorage.setItem("expense",JSON.stringify(fdata));
 
-    displayExp() {
 
-        const rNo = Math.floor(Math.random()*1000);
+    }
+
+    displayExp(v) {
+
 
         const divEle = document.createElement("div");
-        divEle.setAttribute("id","exp-" + rNo);
+        divEle.setAttribute("id","exp-" + v.id);
 
         const sptext = document.createElement("span");
-        sptext.innerText = this.exp.value;
+        sptext.innerText = v.Exp;
 
         
         const spamt = document.createElement("span");
-        spamt.innerText = this.amt.value;
+        spamt.innerText = v.Amount;
         
 
         const editBtn = document.createElement("button");
@@ -82,6 +90,9 @@ class Expense extends Budget {
 
         
         const delBtn = document.createElement("button");
+        delBtn.addEventListener("click", () => {
+            this.removedata(v.id);
+        })
         delBtn.innerText = "D";
 
         divEle.appendChild(sptext);
@@ -148,7 +159,7 @@ class Expense extends Budget {
 
             }
             this.handledata();
-            this.displayExp();
+            this.displayExp(obj);
         }
 
     }
@@ -166,11 +177,20 @@ bform.addEventListener("submit", function () {
 
 
 e.handledata();
-e.displayExp();
+
 
 const eForm = document.getElementById("bugone");
 eForm.addEventListener("submit", function () {
     e.handleExpense();
 })
 
+window.onload = function() {
+    const localdata = JSON.parse(localStorage.getItem("expense"));
 
+    localdata.map((v) => {
+        e.displayExp(v);
+    })
+
+
+
+}
